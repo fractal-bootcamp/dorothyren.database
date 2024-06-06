@@ -20,7 +20,6 @@ async function main(title: string, ISBN: number, name: string, biography: string
     }
     )
 
-
     const allBooks = await prisma.book.findMany()
     console.dir(allBooks)
 
