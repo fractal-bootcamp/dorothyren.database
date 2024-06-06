@@ -21,11 +21,11 @@ model Book {
 
   // Relational ids
   memberId Int?
-  authorId Int
+  authorId Int?
 
   // Relationships
   genre  Genre[]
-  author Author  @relation(fields: [authorId], references: [id])
+  author Author? @relation(fields: [authorId], references: [id])
   Member Member? @relation(fields: [memberId], references: [id])
 }
 
